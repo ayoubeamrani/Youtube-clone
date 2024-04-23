@@ -7,7 +7,7 @@
   font-family: 'Roboto', sans-serif;
   vertical-align: middle;
 }
-header, .middle {
+header, #middle {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,18 +16,18 @@ header, .middle {
 header {
 padding: 0 2%;
 }
-.left, .right, .middle {
+#left, #right, #middle {
   display: flex;
   align-items: center;
   gap: 20px;
 }
-.left {
+#left {
   gap: 10px;
 }
-.middle {
+#middle {
   width: 50%;
 }
-.middle form {
+#middle form {
   display: flex;
   align-items: center;
   width: 100%;
@@ -42,7 +42,7 @@ header form input {
   border: 1px solid rgb(179, 179, 179);
   /* border-right: none; */
 }
-.middle form .stay {
+#middle form .stay {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border: 1px solid rgb(179, 179, 179);
@@ -54,11 +54,15 @@ header form input {
 .aa {
     font-size: 20px;
 }
-.left button, .right button {
+#left button, #right button {
   background: none;
   border: none;
 }
-.micro {
+#hid {
+  font-size: 25px;
+  display: none;
+}
+#micro {
   padding: 10px;
   border: none;
   border-radius: 50%;
@@ -67,31 +71,54 @@ header form input {
 button {
   cursor: pointer;
 }
-.left button {
+#left button {
   padding: 10px;
   border: none;
   border-radius: 50%;
 }
-.right a {
+#right a {
   border: 1px solid #eee;
   padding: 8px 12px 8px 10px;
   border-radius: 22px;
   color: rgb(56, 131, 230);
 }
-.right a:hover{
+#right a:hover{
   background-color: rgb(211, 230, 255); 
 }
-.stay:hover, .micro:hover, .left button:hover {
+.stay:hover, #micro:hover, #left button:hover {
   background-color: rgb(225, 225, 225);
   /* background-color: red; */
   
 }
+#right a::after {
+  content: ' Sign in';
+}
 @media (max-width: 768px) {
-  .left button, .micro, .right button {
+  #left button, #micro, #right button {
     display: none;
   }
   header form input {
     width: 0;
     display: none;
   }
+  #middle {
+    /* background-color: red; */
+    width: 100%;
+  }
+  #middle form {
+    /* background-color: green; */
+    justify-content: flex-end;
+  }
+  #middle form .stay {
+    border: 1px solid transparent;
+    background-color: transparent;
+    padding: 12px;
+  }
+  #right a::after {
+    content: '';
+  }
+  .aa {
+    font-size: 25px;
+  }
+  
 }
