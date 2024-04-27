@@ -194,10 +194,15 @@ button {
 }
 
 .mainContent {
+  height: 100%;
   display: grid;
-  grid-template-columns: 3fr 9fr;
+  grid-template-columns: 1fr 11fr;
 }
-
+.tags-videos {
+  margin-top: 60px;
+  /* background-color: red; */
+  height: 200px;
+}
 
 
 
@@ -209,5 +214,30 @@ button {
 .videos {
   height: 300px;
   width: 300px;
-  background-color: red;
+  /* background-color: red; */
+}
+
+
+
+
+/* mytags */
+
+.tags {
+  position: fixed;
+  left: 1fr;
+  /* margin-top: 56px; */
+  margin-top: 10px;
+}
+#tagOn {
+  background-color: black;
+  color: white;
+}
+.tag {
+  background: rgb(235, 235, 235);
+  padding: 6px 10px;
+  margin: 0 5px;
+  border-radius: 8px;
+}
+.tag:hover {
+  background: rgb(220, 220, 220);
 }
