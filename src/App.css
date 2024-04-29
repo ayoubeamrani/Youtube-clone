@@ -14,12 +14,14 @@ header, #middle {
   /* width: 100%; */
 }
 header {
+  background-color: white;
   position: fixed;
   left: 0;
   top: 0;
   
   width: 100%;
 padding: 0 2%;
+padding-bottom: 15px;
 }
 #left, #right, #middle {
   display: flex;
@@ -202,6 +204,7 @@ button {
   margin-top: 60px;
   /* background-color: red; */
   height: 200px;
+ 
 }
 
 
@@ -212,9 +215,15 @@ button {
 
 
 .videos {
-  height: 300px;
-  width: 300px;
+  /* height: 300px;
+  width: 300px; */
   /* background-color: red; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  gap: 14px;
+  padding: 0 10px;
+  margin-top: 55px;
 }
 
 
@@ -227,6 +236,8 @@ button {
   left: 1fr;
   /* margin-top: 56px; */
   margin-top: 10px;
+  background-color: white;
+  height: 45px;
 }
 #tagOn {
   background-color: black;
@@ -240,4 +251,28 @@ button {
 }
 .tag:hover {
   background: rgb(220, 220, 220);
+}
+.vidInfo {
+  
+    padding-top: 8px;
+    display: flex;
+    gap: 5px;
+}
+
+.info {
+  width: 100%;
+}
+.video img {
+  width: 100%;
+  border-radius: 8px;
+}
+.channel, .less {
+  font-size: 14px;
+  margin: 3px 0;
+  color: rgba(0, 0, 0, .9);
+}
+.vidInfo img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
 }

@@ -4,13 +4,22 @@ import './App.css';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Ytags from './components/Ytags';
-// import Mytest from './components/Mytest';
+import Video from './components/Video';
+import Data from './components/Data';
+
+
 
 
 
 
 
 function App() {
+
+  const myAll = Data.map((pro) =>{return (
+        
+    <Video product={pro} key={pro.id} thum={pro.image} log={pro.logo} title={pro.title} channel={pro.channel} views={pro.views} date={pro.date}/> 
+     
+ )})
   return (
     <div className="App">
 
@@ -37,10 +46,23 @@ function App() {
           </div>
 
           
-          <div className="videos"></div>
 
 
-          
+          <div className="videos">
+            {/* <Video />
+            <Video />
+            <Video />
+            <Video />
+            <Video />
+            <Video />
+            <Video />
+            <Video />
+            <Video /> */}
+            {myAll}
+          </div>
+
+
+
         </div>
       </div>
       {/* <h1>hello world</h1> */}
