@@ -208,7 +208,9 @@ button {
 }
 
 
-
+.video {
+  margin-bottom: 25px;
+}
 
 
 
@@ -275,4 +277,25 @@ button {
   height: 35px;
   width: 35px;
   border-radius: 50%;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .videos {
+      grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .mySide {
+    display: none;
+  }
+  .videos {
+      grid-template-columns: 1fr;
+  }
+  .mainContent {
+    grid-template-columns: 1fr;
+  }
+  .tags {
+    display: none;
+  }
 }
